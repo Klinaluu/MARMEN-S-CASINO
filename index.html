@@ -47,20 +47,61 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 .mc-ribbon:hover{transform:scale(1.05);letter-spacing:.3em}
 .mc-ten{transition:transform .4s cubic-bezier(.2,.8,.2,1),text-shadow .3s;display:inline-block}
 .mc-ten:hover{transform:scale(1.12) rotate(-4deg);text-shadow:0 0 28px rgba(230,195,131,.7)}
+@media (max-width: 600px){
+#mc-root{padding:0 !important}
+.mc-col{border-left:0 !important;border-right:0 !important;border-radius:0 !important}
+.mc-h1{left:28px !important;transform-origin:top center}
+.mc-h1>div:last-child,.mc-h2>div:last-child{zoom:.62}
+.mc-h2{right:24px !important}
+.mc-h3{display:none !important}
+.mc-title{padding:0 34px !important;gap:12px !important}
+.mc-title>div:first-child{font-size:11px !important;gap:10px !important}
+.mc-title h1 span:first-child{font-size:12vw !important}
+.mc-title h1 span:last-child{font-size:15vw !important}
+.mc-ribbon{font-size:13px !important;letter-spacing:.14em !important;padding:11px 14px !important;white-space:nowrap}
+.mc-d1{left:46px !important;bottom:84px !important;zoom:.72}
+.mc-d2{left:112px !important;bottom:60px !important;zoom:.72}
+.mc-d3{right:112px !important;bottom:92px !important;zoom:.72}
+.mc-d4{right:48px !important;bottom:62px !important;zoom:.72}
+.mc-letter{padding:44px 24px 40px !important;gap:16px !important}
+.mc-letter p{font-size:16px !important}
+.mc-letter p:first-child{font-size:28px !important}
+.mc-info{padding:0 16px 48px !important}
+.mc-infobox{padding:28px 12px 18px !important;gap:4px !important}
+.mc-infobox h2{font-size:13px !important;letter-spacing:.28em !important}
+.mc-row{flex-direction:column !important;text-align:center;gap:12px !important;padding:16px 6px !important}
+.mc-row:hover{transform:none}
+.mc-badge{width:48px !important;height:48px !important}
+.mc-row span:first-child{font-size:11px !important;letter-spacing:.22em !important}
+.mc-row span:last-child{font-size:21px !important;line-height:1.35 !important}
+.mc-rules{padding:44px 18px 28px !important;gap:22px !important}
+.mc-rules h2{font-size:30px !important}
+.mc-rules>div:first-child>span{font-size:13px !important;letter-spacing:.3em !important}
+.mc-rule{padding:20px 18px 20px 16px !important;gap:14px !important}
+.mc-rule>div:first-child{width:38px !important;font-size:24px !important}
+.mc-rule h3{font-size:20px !important}
+.mc-rule p{font-size:15.5px !important}
+.mc-closing{padding:36px 24px 130px !important}
+.mc-ten{font-size:104px !important}
+.mc-ten+span{font-size:32px !important}
+.mc-sign{font-size:44px !important}
+.mc-c1{left:26px !important;bottom:36px !important}
+.mc-c2{right:26px !important;bottom:36px !important}
+}
 @media (prefers-reduced-motion: reduce){.mc-sway,.mc-twinkle,.mc-bob{animation:none} }
 </style>
 </head>
 <body>
 <div id="mc-root" style="position: relative; min-height: 100%; background: #3A0A13; padding: 40px 16px 56px; box-sizing: border-box; font-family: 'Be Vietnam Pro', sans-serif; color: #F3E6D3">
-<div style="max-width: 680px; margin: 0 auto; background: #6B1322; background-image: radial-gradient(rgba(248,240,224,0.05) 1.2px, transparent 1.4px); background-size: 14px 14px; border: 1px solid #C9A15A; border-radius: 6px; box-shadow: 0 30px 80px rgba(20,2,6,0.6); overflow: clip">
+<div class="mc-col" style="max-width: 680px; margin: 0 auto; background: #6B1322; background-image: radial-gradient(rgba(248,240,224,0.05) 1.2px, transparent 1.4px); background-size: 14px 14px; border: 1px solid #C9A15A; border-radius: 6px; box-shadow: 0 30px 80px rgba(20,2,6,0.6)">
 
 <!-- ===== CURTAIN STAGE (pinned; content slides over it) ===== -->
 <div id="mc-runway" style="position: relative; height: 860px">
 <div id="mc-anchor" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px"></div>
-<div id="mc-stage" style="position: sticky; top: 0; height: 860px; overflow: hidden">
+<div id="mc-stage" style="position: -webkit-sticky; position: sticky; top: 0; height: 860px; overflow: hidden">
 
 <!-- hero behind the curtain -->
-<div style="position: absolute; inset: 0; transform: scale(calc(0.93 + var(--h, 0) * 0.07)); transform-origin: 50% 45%">
+<div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: scale(calc(0.93 + var(--h, 0) * 0.07)); transform-origin: 50% 45%">
 <svg aria-hidden="true" width="680" height="230" viewBox="0 0 680 230" style="position: absolute; left: 50%; margin-left: -340px; top: 62px">
 <g fill="none" stroke-linecap="round">
 <path d="M-20 26 Q 170 110 340 46 T 700 36" stroke="#3F0A14" stroke-width="1.4"></path>
@@ -71,7 +112,7 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 </svg>
 
 <!-- hanging cards -->
-<div class="mc-sway" aria-hidden="true" style="position: absolute; left: 76px; top: 60px; width: 96px; display: flex; flex-direction: column; align-items: center">
+<div class="mc-sway mc-h1" aria-hidden="true" style="position: absolute; left: 76px; top: 60px; width: 96px; display: flex; flex-direction: column; align-items: center">
 <div style="width: 1px; height: 44px; background: #E6C383"></div>
 <div style="transform: rotate(-10deg)">
 <div class="mc-lift" style="width: 92px; height: 128px; background: #F8F0E0; border-radius: 9px; padding: 7px; box-sizing: border-box; box-shadow: 0 14px 30px rgba(30,4,8,0.5)">
@@ -82,7 +123,7 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 </div>
 </div>
 
-<div class="mc-sway" aria-hidden="true" style="position: absolute; right: 70px; top: 60px; width: 104px; display: flex; flex-direction: column; align-items: center; animation-delay: -1.4s">
+<div class="mc-sway mc-h2" aria-hidden="true" style="position: absolute; right: 70px; top: 60px; width: 104px; display: flex; flex-direction: column; align-items: center; animation-delay: -1.4s">
 <div style="width: 1px; height: 26px; background: #E6C383"></div>
 <div style="transform: rotate(9deg)">
 <div class="mc-lift" style="width: 100px; height: 140px; background: #F8F0E0; border-radius: 9px; box-sizing: border-box; padding: 9px; box-shadow: 0 14px 30px rgba(30,4,8,0.5); display: flex; flex-direction: column; justify-content: space-between">
@@ -93,7 +134,7 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 </div>
 </div>
 
-<div class="mc-sway" aria-hidden="true" style="position: absolute; left: 212px; top: 60px; width: 64px; display: flex; flex-direction: column; align-items: center; animation-delay: -2.3s">
+<div class="mc-sway mc-h3" aria-hidden="true" style="position: absolute; left: 212px; top: 60px; width: 64px; display: flex; flex-direction: column; align-items: center; animation-delay: -2.3s">
 <div style="width: 1px; height: 64px; background: #E6C383"></div>
 <div style="transform: rotate(14deg)">
 <div class="mc-lift" style="width: 60px; height: 84px; background: #F8F0E0; border-radius: 7px; padding: 6px; box-sizing: border-box; box-shadow: 0 10px 22px rgba(30,4,8,0.5); display: flex; flex-direction: column; justify-content: space-between">
@@ -105,7 +146,7 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 </div>
 
 <!-- title -->
-<div style="position: absolute; left: 0; right: 0; top: 54%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 0 56px">
+<div class="mc-title" style="position: absolute; left: 0; right: 0; top: 54%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 0 56px">
 <div style="display: flex; align-items: center; gap: 14px; font-size: 14px; font-weight: 600; letter-spacing: 0.42em; color: #E6C383">
 <span>MEN'S DAY</span>
 <svg aria-hidden="true" width="10" height="10" viewBox="0 0 24 24"><path d="M12 1.8 19.4 12 12 22.2 4.6 12z" fill="#E6C383"></path></svg>
@@ -119,24 +160,24 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 </div>
 
 <!-- chips and dice -->
-<div aria-hidden="true" style="position: absolute; left: 86px; bottom: 96px">
+<div class="mc-d1" aria-hidden="true" style="position: absolute; left: 86px; bottom: 96px">
 <div class="mc-chip" style="width: 84px; height: 84px; border-radius: 50%; background: repeating-conic-gradient(#F8F0E0 0 18deg, #B3122A 18deg 45deg); box-shadow: 0 8px 18px rgba(30,4,8,0.5); display: flex; align-items: center; justify-content: center">
 <div style="width: 58px; height: 58px; border-radius: 50%; background: #8E0F20; border: 2px dashed #E6C383; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 21.5S3 15.8 3 9.6C3 6.5 5.3 4.2 8.2 4.2c1.6 0 3 .8 3.8 2.1.8-1.3 2.2-2.1 3.8-2.1 2.9 0 5.2 2.3 5.2 5.4 0 6.2-9 11.9-9 11.9z" fill="#E6C383"></path></svg></div>
 </div>
 </div>
-<div aria-hidden="true" style="position: absolute; left: 150px; bottom: 60px">
+<div class="mc-d2" aria-hidden="true" style="position: absolute; left: 150px; bottom: 60px">
 <div class="mc-chip" style="width: 70px; height: 70px; border-radius: 50%; background: repeating-conic-gradient(#E6C383 0 18deg, #2A1215 18deg 45deg); box-shadow: 0 8px 18px rgba(30,4,8,0.5); display: flex; align-items: center; justify-content: center">
 <div style="width: 48px; height: 48px; border-radius: 50%; background: #2A1215; border: 2px dashed #E6C383; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2C9.2 5.8 3 9.2 3 13.6 3 16.1 5 18 7.4 18c1.5 0 2.7-.6 3.5-1.6L9.8 22h4.4l-1.1-5.6c.8 1 2 1.6 3.5 1.6 2.4 0 4.4-1.9 4.4-4.4C21 9.2 14.8 5.8 12 2z" fill="#E6C383"></path></svg></div>
 </div>
 </div>
-<div aria-hidden="true" style="position: absolute; right: 150px; bottom: 100px; transform: rotate(-14deg)">
+<div class="mc-d3" aria-hidden="true" style="position: absolute; right: 150px; bottom: 100px; transform: rotate(-14deg)">
 <div class="mc-die" style="width: 64px; height: 64px; background: #B3122A; border-radius: 13px; padding: 10px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); place-items: center; box-shadow: inset 0 3px 0 rgba(255,255,255,0.25), inset 0 -5px 0 rgba(60,5,12,0.45), 0 12px 22px rgba(30,4,8,0.55)">
 <div style="width: 10px; height: 10px; border-radius: 50%; background: #F8F0E0"></div><div></div><div style="width: 10px; height: 10px; border-radius: 50%; background: #F8F0E0"></div>
 <div></div><div style="width: 10px; height: 10px; border-radius: 50%; background: #F8F0E0"></div><div></div>
 <div style="width: 10px; height: 10px; border-radius: 50%; background: #F8F0E0"></div><div></div><div style="width: 10px; height: 10px; border-radius: 50%; background: #F8F0E0"></div>
 </div>
 </div>
-<div aria-hidden="true" style="position: absolute; right: 84px; bottom: 62px; transform: rotate(18deg)">
+<div class="mc-d4" aria-hidden="true" style="position: absolute; right: 84px; bottom: 62px; transform: rotate(18deg)">
 <div class="mc-die" style="width: 54px; height: 54px; background: #B3122A; border-radius: 11px; padding: 8px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); place-items: center; box-shadow: inset 0 3px 0 rgba(255,255,255,0.25), inset 0 -5px 0 rgba(60,5,12,0.45), 0 12px 22px rgba(30,4,8,0.55)">
 <div style="width: 9px; height: 9px; border-radius: 50%; background: #F8F0E0"></div><div></div><div style="width: 9px; height: 9px; border-radius: 50%; background: #F8F0E0"></div>
 <div style="width: 9px; height: 9px; border-radius: 50%; background: #F8F0E0"></div><div></div><div style="width: 9px; height: 9px; border-radius: 50%; background: #F8F0E0"></div>
@@ -150,7 +191,7 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 <div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; right: 0; width: 51%; transform: translateX(calc(var(--p, 0) * 87%)); background: linear-gradient(180deg, rgba(40,2,8,0.4), rgba(40,2,8,0) 22%, rgba(40,2,8,0) 62%, rgba(40,2,8,0.55)), repeating-linear-gradient(270deg, #4E050F 0px, #8C0D1E 14px, #B8162B 30px, #D2283C 38px, #A51226 50px, #6E0915 68px, #4E050F 80px); border-left: 4px solid #D9B36A; box-sizing: border-box; box-shadow: inset 0 -120px 90px rgba(60,5,12,0.55), -12px 0 30px rgba(30,4,8,0.45)"></div>
 
 <!-- closed-curtain message -->
-<div id="mc-overlay" style="position: absolute; inset: 0; opacity: var(--t, 1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center; padding: 0 40px; background: radial-gradient(ellipse 56% 44% at 50% 50%, rgba(255,120,120,0.34), rgba(255,120,120,0) 70%)">
+<div id="mc-overlay" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: var(--t, 1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center; padding: 0 40px; background: radial-gradient(ellipse 56% 44% at 50% 50%, rgba(255,120,120,0.34), rgba(255,120,120,0) 70%)">
 <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.42em; color: #FFE9BF">MEN'S DAY 2026</span>
 <div style="font-family: 'Playfair Display', serif; font-weight: 900; line-height: 1; color: #FFF6E2; display: flex; flex-direction: column; gap: 6px; text-shadow: 0 4px 18px rgba(60,5,12,0.6)">
 <span style="font-size: clamp(34px, 9vw, 56px)">MARMEN'S</span>
@@ -170,16 +211,16 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 
 <div style="position: relative; border-top: 1px solid #C9A15A">
 <!-- ===== LETTER ===== -->
-<section data-reveal="1" style="padding: 64px 64px 56px; display: flex; flex-direction: column; gap: 20px; align-items: center; text-align: center">
+<section class="mc-letter" data-reveal="1" style="padding: 64px 64px 56px; display: flex; flex-direction: column; gap: 20px; align-items: center; text-align: center">
 <p style="margin: 0; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; font-size: 36px; color: #F8F0E0">Kính gửi các quý ông!</p>
-<p style="margin: 0; font-size: 18px; line-height: 1.75">Nhân dịp <strong style="color: #F8F0E0">Men's Day 2026</strong>, một sòng bạc đặc biệt sắp chính thức mở cửa ngay tại <strong style="color: #E6C383">đại bản doanh SeAMarcom</strong>!</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.75">Nhân dịp <strong style="color: #F8F0E0">Men's Day 2026</strong>, một “sòng bạc” đặc biệt sắp chính thức mở cửa ngay tại <strong style="color: #E6C383">đại bản doanh SeAMarcom</strong>!</p>
 <p style="margin: 0; font-size: 18px; line-height: 1.75">Tại đây, vận may có thể đến bất ngờ, những cuộc đấu trí hứa hẹn đầy kịch tính và các quý ông sẽ có cơ hội chứng minh bản lĩnh của mình trước những <strong style="color: #F8F0E0">nữ chủ sòng vô cùng xinh đẹp</strong>. 😎</p>
 </section>
 
 <!-- ===== INFO ===== -->
-<section data-reveal="1" style="padding: 0 40px 64px">
+<section class="mc-info" data-reveal="1" style="padding: 0 40px 64px">
 <div style="border: 1px solid #C9A15A; padding: 8px; border-radius: 4px">
-<div style="border: 1px solid #C9A15A; border-radius: 2px; padding: 36px 24px 28px; display: flex; flex-direction: column; gap: 10px; background: #56101C">
+<div class="mc-infobox" style="border: 1px solid #C9A15A; border-radius: 2px; padding: 36px 24px 28px; display: flex; flex-direction: column; gap: 10px; background: #56101C">
 <h2 style="margin: 0 0 10px; text-align: center; font-size: 15px; font-weight: 700; letter-spacing: 0.4em; color: #E6C383">THÔNG TIN CUỘC HẸN</h2>
 
 <div class="mc-row" style="display: flex; gap: 20px; align-items: center; padding: 14px 16px; border-radius: 10px">
@@ -223,7 +264,7 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 </div>
 
 <!-- ===== THREE RULES ===== -->
-<section style="padding: 56px 48px 40px; display: flex; flex-direction: column; gap: 30px">
+<section class="mc-rules" style="padding: 56px 48px 40px; display: flex; flex-direction: column; gap: 30px">
 <div data-reveal="1" style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
 <span style="font-size: 15px; font-weight: 700; letter-spacing: 0.4em; color: #E6C383">BA ĐIỀU CẦN NHỚ</span>
 <h2 style="margin: 0; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 900; font-size: 40px; color: #F8F0E0">trước khi nhập cuộc</h2>
@@ -261,7 +302,7 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 </section>
 
 <!-- ===== CLOSING ===== -->
-<section data-reveal="1" style="position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 48px 48px 72px; gap: 6px">
+<section class="mc-closing" data-reveal="1" style="position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 48px 48px 72px; gap: 6px">
 <span style="font-size: 20px; font-weight: 500">Hẹn gặp</span>
 <div style="display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 16px; font-family: 'Playfair Display', serif; font-weight: 900; line-height: 1">
 <span class="mc-ten" style="font-size: 136px; color: #E6C383; text-shadow: 0 6px 0 #4A0C17">10</span>
@@ -278,17 +319,17 @@ a{color:#E6C383}a:hover{color:#F8F0E0}
 <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; font-size: 21px; color: #F3E6D3">Mến thương kính mời,</span>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 8px">
 <svg aria-hidden="true" width="44" height="30" viewBox="0 0 44 30"><path d="M4 26 L2 6 L13 15 L22 2 L31 15 L42 6 L40 26 Z" fill="none" stroke="#E6C383" stroke-width="2.2" stroke-linejoin="round"></path><circle cx="22" cy="2.5" r="2" fill="#E6C383"></circle><circle cx="2.5" cy="6" r="2" fill="#E6C383"></circle><circle cx="41.5" cy="6" r="2" fill="#E6C383"></circle></svg>
-<span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 900; font-size: 54px; color: #E6C383; line-height: 1.05">MarQueen</span>
+<span class="mc-sign" style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 900; font-size: 54px; color: #E6C383; line-height: 1.05">MarQueen</span>
 </div>
 
-<div aria-hidden="true" style="position: absolute; left: 30px; bottom: 44px; transform: rotate(-14deg)">
+<div class="mc-c1" aria-hidden="true" style="position: absolute; left: 30px; bottom: 44px; transform: rotate(-14deg)">
 <div class="mc-die" style="width: 62px; height: 62px; background: #B3122A; border-radius: 12px; padding: 10px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); place-items: center; box-shadow: inset 0 3px 0 rgba(255,255,255,0.25), inset 0 -5px 0 rgba(60,5,12,0.45), 0 12px 22px rgba(30,4,8,0.55)">
 <div style="width: 10px; height: 10px; border-radius: 50%; background: #F8F0E0"></div><div></div><div></div>
 <div></div><div style="width: 10px; height: 10px; border-radius: 50%; background: #F8F0E0"></div><div></div>
 <div></div><div></div><div style="width: 10px; height: 10px; border-radius: 50%; background: #F8F0E0"></div>
 </div>
 </div>
-<div aria-hidden="true" style="position: absolute; right: 30px; bottom: 50px">
+<div class="mc-c2" aria-hidden="true" style="position: absolute; right: 30px; bottom: 50px">
 <div class="mc-chip" style="width: 66px; height: 66px; border-radius: 50%; background: repeating-conic-gradient(#F8F0E0 0 18deg, #B3122A 18deg 45deg); box-shadow: 0 8px 16px rgba(30,4,8,0.5); display: flex; align-items: center; justify-content: center"><div style="width: 46px; height: 46px; border-radius: 50%; background: #8E0F20; border: 2px dashed #E6C383; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2C9.2 5.8 3 9.2 3 13.6 3 16.1 5 18 7.4 18c1.5 0 2.7-.6 3.5-1.6L9.8 22h4.4l-1.1-5.6c.8 1 2 1.6 3.5 1.6 2.4 0 4.4-1.9 4.4-4.4C21 9.2 14.8 5.8 12 2z" fill="#E6C383"></path></svg></div></div>
 </div>
 </section>
@@ -321,8 +362,10 @@ window.removeEventListener('wheel', this.onWheel);
 }
 layout() {
 var vh = window.innerHeight || 800;
-if (vh === this.lastVh) { return; }
+var vw = window.innerWidth || 0;
+if (this.lastVh > 0 && vw === this.lastVw && Math.abs(vh - this.lastVh) < 140) { return; }
 this.lastVh = vh;
+this.lastVw = vw;
 var base = this.root.offsetHeight - (this.runway.offsetHeight - 860);
 this.scrollMode = base > vh * 1.3;
 if (this.scrollMode) {
